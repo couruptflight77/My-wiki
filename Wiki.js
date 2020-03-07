@@ -31,6 +31,7 @@ function playGame() {
 
   switch (playersInput) {
     case "a3": {
+      
       break
     }
     default :{
