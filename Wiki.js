@@ -3,7 +3,7 @@ image[0] = "start.png"
 image[1] = "a3.png"
 image[2] = "a4.png"
 
-var moveImage = 0
+var image = 0
 
 var playersInput = "";
 
@@ -28,12 +28,12 @@ button.style.cursor = "pointer";
 button.addEventListener("click", playGame);
 
 function playGame() {
-  playersInput = input.value;
+  playersInput = input.value; 
   playersInput = playersInput.toLowerCase();
 
   action = "";
 
-  image.src = "Images/" + images[moveImage];
+  image.src = "Images/" + image[moveImage];
 
   MovesDiv.innerHTML = "<br><em>" + Lmove + "</em>";
 }
