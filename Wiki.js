@@ -1,47 +1,39 @@
-var image, []
+var image = []
+image[0] = "start.png"
+image[1] = "a3.png"
+image[2] = "a4.png"
 
-var mapLocation = 8;
-
-var reloading;
-var begining;
-
-localStorage.setItem("startOfGame", "beganGame");
+var moveImage = 0
 
 var playersInput = "";
 
-var commandNotFoundText = "";
+//legal move files
+localStorage.setItem("a3 a4", "legal1")
+//end of legal move files
+
 
 var commands = [];
 
-var insideInventory = [];
-
 var action = "";
 
-var gameMessage = "";
+var Lmove = "";
 
 var output = document.querySelector("#output");
 var input = document.querySelector("#input");
 var gameMessageDiv = document.querySelector("#text");
-var commandNotFound = document.querySelector("#cmdNtFound");
-var Inventory = document.querySelector("#Inventory");
 var image = document.querySelector("img");
 
 var button = document.querySelector("button");
 button.style.cursor = "pointer";
 button.addEventListener("click", playGame);
 
-render();
-
 function playGame() {
   playersInput = input.value;
   playersInput = playersInput.toLowerCase();
 
   action = "";
-  commandNotFoundText = "";
 
-  image.src = "images/" + images[mapImage];
+  image.src = "Images/" + images[moveImage];
 
-  gameMessageDiv.innerHTML = "<br><em>" + gameMessage + "</em>";
-  Inventory.innerHTML = "<br><em>" + insideInventory + "</em>";
-  commandNotFound.innerHTML = "<br><em>" + commandNotFoundText + "</em>";
+  MovesDiv.innerHTML = "<br><em>" + Lmove + "</em>";
 }
