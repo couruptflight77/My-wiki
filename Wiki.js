@@ -3,14 +3,11 @@ images[0] = "start.png"
 images[1] = "a3.png"
 images[2] = "a4.png"
 
+var move = 0
+
 var moveImage = 0
 
 var playersInput = "";
-
-//legal move files
-localStorage.setItem("a3 a4", "legal1")
-//end of legal move files
-
 
 var commands = [];
 
@@ -31,8 +28,10 @@ function playGame() {
 
   switch (playersInput) {
     case "a3": {
-      
+      if (move === 1) {
+      moveImage = 1
       break
+      }
     }
     default :{
       
