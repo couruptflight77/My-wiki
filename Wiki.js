@@ -1,9 +1,9 @@
-var image = []
-image[0] = "start.png"
-image[1] = "a3.png"
-image[2] = "a4.png"
+var images = []
+images[0] = "start.png"
+images[1] = "a3.png"
+images[2] = "a4.png"
 
-var image = 0
+var moveImage = 0
 
 var playersInput = "";
 
@@ -14,14 +14,12 @@ localStorage.setItem("a3 a4", "legal1")
 
 var commands = [];
 
-var action = "";
-
 var Lmove = "";
 
 var output = document.querySelector("#output");
 var input = document.querySelector("#input");
-var gameMessageDiv = document.querySelector("#text");
-var image = document.querySelector("img");
+var MovesDiv = document.querySelector("#text");
+var image = document.querySelector("#img");
 
 var button = document.querySelector("button");
 button.style.cursor = "pointer";
@@ -31,9 +29,18 @@ function playGame() {
   playersInput = input.value; 
   playersInput = playersInput.toLowerCase();
 
-  action = "";
+  switch (playersInput) {
+    case "a3": {
+      break
+    }
+    default :{
+      
+    break
+    }
+  }
 
-  image.src = "Images/" + image[moveImage];
 
+  image.src = "Images/" + images[moveImage];
   MovesDiv.innerHTML = "<br><em>" + Lmove + "</em>";
 }
+playGame()
